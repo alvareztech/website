@@ -1,12 +1,9 @@
 ---
 title: Generar APKs desde un AAB con BundleTool
 description: Si tienes un Android App Bundle puedes generar los APKs que necesitas para instalarlas en tus devices.
-tags: 
-- android
-- aab
-- apk
+tags: [android, aab, apk]
 date: 2020-06-25 08:00
-lang: es
+language: es
 ---
 Si tienes un AAB (Android App Bundle) puedes generar los APKs que necesitas para instalarlas en tus devices. Las tiendas de aplicaciones recomiendan usar el formato AAB porque son ellas las que generan un APK personalizado para el device que descarga la aplicación, así se aligera la aplicación entre otras cosas.
 
