@@ -14,11 +14,13 @@ export default function Home({ posts }) {
         <p>Here I share everything I do. Tutorials, code and more.</p>
       </section>
       <section className="mx-auto w-10/12 space-y-4">
-        {posts.map(({ slug, date, title, tags, lang }) => (
+        {posts.map(({ slug, date, title, tags, lang, summary }) => (
           <div key={slug} className="border rounded p-4">
             <Link href={`/${slug}`}>
               <a className="text-xl font-bold">{title}</a>
             </Link>
+            <br />
+            {summary}
             <br />
             <small className="text-sm text-gray-600">
               <Date dateString={date} />

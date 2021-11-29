@@ -1,6 +1,6 @@
 ---
 title: "Creación de la aplicación Android: Planear Día, uso de Google Maps, Google Places y Realm"
-description: Creación de una aplicación Android que te permitirá planear el recorrido del día, seleccionar un lugar registrado en Google con Google Places, guardarlo en la base de datos Realm.
+summary: Creación de una aplicación Android que te permitirá planear el recorrido del día, seleccionar un lugar registrado en Google con Google Places, guardarlo en la base de datos Realm.
 tags: [android, java, google maps, google places, realm]
 date: 2016-09-28 08:00
 language: es

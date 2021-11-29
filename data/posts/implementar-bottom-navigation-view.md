@@ -1,6 +1,6 @@
 ---
 title: Implementar Bottom Navigation View en Android para la navegación
-description: Implementación de un Bottom Navigation View en una aplicación Android.
+summary: Implementación de un Bottom Navigation View en una aplicación Android.
 tags: [android, material, jetpack, androidx]
 video.youTube: aTPwcWQIckw
 date: 2016-10-22 08:00

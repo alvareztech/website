@@ -1,6 +1,6 @@
 ---
 title: Personalizar colores, caminos, etiquetas y otros en tu mapa GoogleMaps
-description: En este tutorial verás como gestionar los permisos para las versiones Android 6.0 o superior.
+summary: En este tutorial verás como gestionar los permisos para las versiones Android 6.0 o superior.
 tags: [android, google maps]
 date: 2017-04-23 08:00
 language: es

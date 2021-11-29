@@ -1,6 +1,6 @@
 ---
 title: Colocar botón de retroceso a una Activity en Android
-description: Podemos colocar el botón de retroceso (back button) a nuestra Activity de forma nativa de la siguiente forma.
+summary: Podemos colocar el botón de retroceso (back button) a nuestra Activity de forma nativa de la siguiente forma.
 tags: [android]
 date: 2017-05-18 08:00
 language: es

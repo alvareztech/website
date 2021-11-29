@@ -1,6 +1,6 @@
 ---
 title: Consumir una API, WebService con Retrofit en Android
-description: Tutorial para crear una aplicación Pokédex desde cero.
+summary: Tutorial para crear una aplicación Pokédex desde cero.
 tags: [android, retrofit, java, glide]
 video.youTube: xQn8u4Htib4
 language: es

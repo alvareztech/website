@@ -1,6 +1,6 @@
 ---
 title: "Creación de la aplicación Android: Noticias, consumir XML, usar AsyncTask"
-description: Creación de una aplicación Android que sea capaz de leer el feed RSS de un periódico para mostrar las noticias en un RecyclerView con fotos
+summary: Creación de una aplicación Android que sea capaz de leer el feed RSS de un periódico para mostrar las noticias en un RecyclerView con fotos
 tags:
 - android
 - java

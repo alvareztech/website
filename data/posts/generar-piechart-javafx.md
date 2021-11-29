@@ -1,6 +1,6 @@
 ---
 title: Generar un gráfico Pie con JavaFX
-description: Crearás una aplicación simple en JavaFX para ver en un gráfico estadístico en forma de Pie los resultados de unas elecciones de partidos políticos.
+summary: Crearás una aplicación simple en JavaFX para ver en un gráfico estadístico en forma de Pie los resultados de unas elecciones de partidos políticos.
 tags: [java, javafx]
 date: 2017-05-28 08:00
 language: es

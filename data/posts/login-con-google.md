@@ -1,6 +1,6 @@
 ---
 title: Login Google en Android
-description: Autenticación con Google en una aplicación Android, además de la obtención de información del usuario como nombres, correo electrónico, id y fotografía de perfil.
+summary: Autenticación con Google en una aplicación Android, además de la obtención de información del usuario como nombres, correo electrónico, id y fotografía de perfil.
 tags: [android, google]
 date: 2019-10-23 12:00
 video.youTube: O3aemJ9eAAA

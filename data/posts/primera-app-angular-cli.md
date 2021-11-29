@@ -1,6 +1,6 @@
 ---
 title: Crear tu primera aplicación web con Angular CLI
-description: Como crear tu primera aplicación web con Angular con un par de líneas de comandos.
+summary: Como crear tu primera aplicación web con Angular con un par de líneas de comandos.
 tags: [angular, web]
 language: es
 date: 2017-05-26 08:00

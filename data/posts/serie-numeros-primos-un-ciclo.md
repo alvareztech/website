@@ -1,6 +1,6 @@
 ---
 title: Serie de Números Primos con un solo ciclo
-description: La serie de los números primos es 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47,…
+summary: La serie de los números primos es 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47,…
 tags: [algorithm, java]
 date: 2010-10-02 08:00
 language: es

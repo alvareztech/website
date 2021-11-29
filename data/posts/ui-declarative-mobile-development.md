@@ -1,6 +1,6 @@
 ---
 title: UI Declarative for Mobile Development
-description: SwiftUI for iOS, Jetpack Compose for Android
+summary: SwiftUI for iOS, Jetpack Compose for Android
 tags: [ios, android]
 date: 2019-10-12 08:00
 highlight: true

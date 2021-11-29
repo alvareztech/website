@@ -1,6 +1,6 @@
 ---
 title: "Firebase: Login Facebook en Android"
-description: Implementarás el inicio de sesión con Facebook en tu aplicación Android usando Firebase Authentication.
+summary: Implementarás el inicio de sesión con Facebook en tu aplicación Android usando Firebase Authentication.
 tags: [android, firebase, facebook]
 video.youTube: YO6Xx5glLPE
 language: es

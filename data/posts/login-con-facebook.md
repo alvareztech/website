@@ -1,6 +1,6 @@
 ---
 title: Login Facebook en Android
-description: Inicio de sesión con Facebook en una aplicación Android. Además de obtener la información del usuario y mostrarla.
+summary: Inicio de sesión con Facebook en una aplicación Android. Además de obtener la información del usuario y mostrarla.
 tags: [android, facebook]
 video.youTube: 1HgM_vc-rSc
 language: es

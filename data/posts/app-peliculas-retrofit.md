@@ -1,6 +1,6 @@
 ---
 title: "Creación de la aplicación Android: Películas, consumo de una API con Retrofit"
-description: Una aplicación Android que en su primera pantalla muestre en un RecyclerView el listado de las películas actualmente en los cines.
+summary: Una aplicación Android que en su primera pantalla muestre en un RecyclerView el listado de las películas actualmente en los cines.
 tags: [android, java, retrofit, glide]
 date: 2016-07-24 08:00
 language: es

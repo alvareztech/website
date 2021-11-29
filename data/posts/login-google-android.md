@@ -1,6 +1,6 @@
 ---
 title: "Firebase: Login Google en Android"
-description: Implementarás un login con Google en Firebase en tu aplicación Android. 
+summary: Implementarás un login con Google en Firebase en tu aplicación Android. 
 tags: [android, firebase, google]
 video.youTube: rPzHPNOt7Js
 language: es

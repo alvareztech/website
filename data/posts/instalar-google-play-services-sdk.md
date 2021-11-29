@@ -1,6 +1,6 @@
 ---
 title: Instalar Google Play Services SDK
-description: Instalar el SDK (Software Development Kit) de Google Play Services para Android para luego poder utilizar los servicios que ofrece en tus aplicaciones.
+summary: Instalar el SDK (Software Development Kit) de Google Play Services para Android para luego poder utilizar los servicios que ofrece en tus aplicaciones.
 tags: [android, google play services]
 date: 2017-05-22 08:00
 language: es

@@ -1,6 +1,6 @@
 ---
 title: Ver información de un Keystore con Keytool
-description: Listar la información de un keystore, alias, etc.
+summary: Listar la información de un keystore, alias, etc.
 tags: [keytool, java]
 date: 2020-06-30 08:00
 language: es

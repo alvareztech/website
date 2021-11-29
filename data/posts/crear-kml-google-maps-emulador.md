@@ -1,6 +1,6 @@
 ---
 title: Crear KML desde Google Maps para el emulador de Android
-description: Si quieres simular recorridos en tu emulador Android puedes crear un archivo KML desde Google Maps.
+summary: Si quieres simular recorridos en tu emulador Android puedes crear un archivo KML desde Google Maps.
 date: 2017-06-13 08:00
 tags: [google maps, android]
 language: es

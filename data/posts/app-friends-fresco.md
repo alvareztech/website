@@ -1,6 +1,6 @@
 ---
 title: "Creación de la aplicación Android: Friends"
-description: Creación de una aplicación sencilla de contactos usando Fresco, la librería de Facebook.
+summary: Creación de una aplicación sencilla de contactos usando Fresco, la librería de Facebook.
 tags:
 - android
 - java
