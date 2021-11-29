@@ -6,7 +6,7 @@ tags:
 - aab
 - apk
 date: 2020-06-25 08:00
-language: es
+lang: es
 ---
 Si tienes un AAB (Android App Bundle) puedes generar los APKs que necesitas para instalarlas en tus devices. Las tiendas de aplicaciones recomiendan usar el formato AAB porque son ellas las que generan un APK personalizado para el device que descarga la aplicación, así se aligera la aplicación entre otras cosas.
 

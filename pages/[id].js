@@ -20,18 +20,13 @@ export default function Post({ postData }) {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className="flex items-start justify-center mt-14 w-full">
           <div className="space-x-2 flex-1 -mt-0.5">
-            {/* {frontMatter.tags?.map(tag => ( */}
-            <span
-              key="hello"
-              className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
-              hello
-            </span>
-            <span
-              key="hello"
-              className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
-              hello
-            </span>
-            {/* ))} */}
+            {postData.tags?.map(tag => (
+              <span
+                key={tag}
+                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+                {tag}
+              </span>
+            ))}
           </div>
           <div className="ml-4 text-sm text-gray-500 dark:text-gray-500 transition-colors hover:text-gray-700 dark:hover:text-gray-300">
             <a
