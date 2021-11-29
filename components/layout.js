@@ -26,29 +26,11 @@ export default function Layout({ children, home }) {
       <header>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1>{name}</h1>
+            <h1 className="text-xl text-center font-bold my-8">{name}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2>
+            <h2 className="text-xl text-center font-bold my-8">
               <Link href="/">
                 <a>{name}</a>
               </Link>

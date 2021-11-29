@@ -11,27 +11,20 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>Here I share everything I do. Tutorials, code and more.</p>
       </section>
-      <section>
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
+      <section className="mx-auto w-10/12 space-y-4">
+        {allPostsData.map(({ id, date, title }) => (
+          <div key={id} className="border rounded p-4">
+            <Link href={`/${id}`}>
+              <a className="text-xl font-bold">{title}</a>
+            </Link>
+            <br />
+            <small className="text-sm text-gray-600">
+              <Date dateString={date} />
+            </small>
+          </div>
+        ))}
       </section>
     </Layout>
   )

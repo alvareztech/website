@@ -9,7 +9,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className="mx-auto w-10/12">
         <h1>{postData.title}</h1>
         <div>
           <Date dateString={postData.date} />
