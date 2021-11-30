@@ -1,9 +1,7 @@
 ---
 title: Gestionar permisos para Android 6.0, API 23
-description: En este tutorial verás como gestionar los permisos para las versiones Android 6.0 o superior.
-tags:
-- android
-- java
+summary: En este tutorial verás como gestionar los permisos para las versiones Android 6.0 o superior.
+tags: [android, java]
 date: 2017-04-23 08:00
 language: es
 image: banners/gestionar-permisos-android6-api23.png
