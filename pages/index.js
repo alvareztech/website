@@ -78,6 +78,13 @@ export default function Home({posts}) {
                   <p className="mt-3 text-base text-gray-500">{summary}</p>
                 </a>
               </Link>
+              {tags?.map(tag => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800">
+                {tag}
+              </span>
+              ))}
               <div className="mt-6 flex items-center">
                 <div className="flex space-x-1 text-sm text-gray-500">
                   <Date dateString={date}/>
