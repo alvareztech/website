@@ -30,7 +30,7 @@ export default function Post({ postData }) {
           </div>
           <div className="ml-4 text-sm text-gray-500 dark:text-gray-500 transition-colors hover:text-gray-700 dark:hover:text-gray-300">
             <a
-              href={editUrl(postData.id)}
+              href={editUrl(postData.slug)}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -53,7 +53,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPost(params.id)
+  const postData = await getPost(params.slug)
   // console.log("getStaticProps:", postData)
   return {
     props: {
