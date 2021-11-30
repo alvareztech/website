@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import { getAllPostIds, getPost } from '../lib/posts'
+import { getPostSlugs, getPost } from '../lib/posts'
 import Head from 'next/head'
 import Date from '../components/date'
 
@@ -44,8 +44,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
-  console.log("getStaticPaths:", paths)
+  const paths = getPostSlugs()
   return {
     paths,
     fallback: false
