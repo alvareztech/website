@@ -3,16 +3,27 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-4xl mt-4;
-    }
-    h2 {
-        @apply text-2xl mt-4;
-    }
-    p {
-        @apply my-4;
-    }
-    a {
-        @apply text-blue-600 hover:text-blue-400;
-    }
+  h1 {
+    @apply text-4xl mt-4;
+  }
+
+  h2 {
+    @apply text-2xl mt-4;
+  }
+
+  h3 {
+    @apply text-xl mt-4;
+  }
+
+  h4 {
+    @apply text-xl mt-4;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-400;
+  }
 }

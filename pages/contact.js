@@ -1,5 +1,4 @@
 import Layout from '../components/layout'
-import {MailIcon, PhoneIcon} from '@heroicons/react/outline'
 
 export default function Contact() {
   return (
@@ -13,64 +12,23 @@ export default function Contact() {
                 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Contact</h2>
               <div className="mt-3">
                 <p className="text-lg text-gray-500">
-                  Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                  volutpat massa dictumst amet. Sapien tortor
-                  lacus arcu.
+                  Comments, questions or feedback, happy to help you out!
                 </p>
-              </div>
-              <div className="mt-9">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <PhoneIcon className="h-6 w-6 text-gray-400"
-                               aria-hidden="true"/>
-                  </div>
-                  <div className="ml-3 text-base text-gray-500">
-                    <p>+1 (555) 123 4567</p>
-                    <p className="mt-1">Mon-Fri 8am to 6pm PST</p>
-                  </div>
-                </div>
-                <div className="mt-6 flex">
-                  <div className="flex-shrink-0">
-                    <MailIcon className="h-6 w-6 text-gray-400"
-                              aria-hidden="true"/>
-                  </div>
-                  <div className="ml-3 text-base text-gray-500">
-                    <p>support@example.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 sm:mt-16 md:mt-0">
-              <h2
-                className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Technical
-                Support</h2>
-              <div className="mt-3">
                 <p className="text-lg text-gray-500">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Magni, repellat error corporis doloribus
-                  similique, voluptatibus numquam quam, quae officiis facilis.
+                  The best way to reach me is via @alvarez_tech on Twitter.
                 </p>
-              </div>
-              <div className="mt-9">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <PhoneIcon className="h-6 w-6 text-gray-400"
-                               aria-hidden="true"/>
-                  </div>
-                  <div className="ml-3 text-base text-gray-500">
-                    <p>+1 (555) 123 4567</p>
-                    <p className="mt-1">Mon-Fri 8am to 6pm PST</p>
-                  </div>
-                </div>
-                <div className="mt-6 flex">
-                  <div className="flex-shrink-0">
-                    <MailIcon className="h-6 w-6 text-gray-400"
-                              aria-hidden="true"/>
-                  </div>
-                  <div className="ml-3 text-base text-gray-500">
-                    <p>support@example.com</p>
-                  </div>
-                </div>
+                <p className="text-lg text-gray-500">
+                  Message @alvareztech
+
+                  Social networks:
+                  <ul>
+                    <li>GitHub</li>
+                    <li>LinkedIn</li>
+                  </ul>
+                  You can also send me an email.
+
+                  daniel@alvarez.tech
+                </p>
               </div>
             </div>
           </div>

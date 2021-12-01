@@ -4,7 +4,7 @@ import {MenuIcon,} from '@heroicons/react/outline'
 import Link from 'next/link'
 
 const name = 'ALVAREZ.tech'
-export const siteTitle = 'Here I share everything I do. Tutorials, code and more.'
+export const siteTitle = 'ALVAREZ.tech, Software Development by Daniel'
 
 const navigation2 = [
   {
@@ -69,11 +69,11 @@ export default function Layout({children, home}) {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <a>
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">{name}</span>
                 <img
                   className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt=""
+                  src="/alvareztech.png"
+                  alt="alvarez.tech"
                 />
               </a>
             </Link>

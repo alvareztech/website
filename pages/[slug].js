@@ -2,7 +2,7 @@ import Layout from '../components/layout'
 import {getPost, getPostSlugs} from '../lib/posts'
 import Head from 'next/head'
 
-const editUrl = (slug) => `https://github.com/alvareztech/website/edit/main/data/blog/${slug}.md`;
+const editUrl = (slug) => `https://github.com/alvareztech/website/edit/main/data/posts/${slug}.md`;
 
 export default function Post({postData}) {
   return (<Layout>
@@ -91,7 +91,7 @@ export default function Post({postData}) {
           <h1>
             <span
               className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
-              Introducing
+              {postData.tags[0]}
             </span>
             <span
               className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -138,7 +138,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
   const postData = await getPost(params.slug)
-  // console.log("getStaticProps:", postData)
   return {
     props: {
       postData
