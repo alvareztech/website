@@ -5,3 +5,4 @@
 - Next.js
 - React.js
 - Tailwind
+- Vercel

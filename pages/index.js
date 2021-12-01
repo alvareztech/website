@@ -18,57 +18,34 @@ export default function Home({posts}) {
         className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2
           className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block">Ready to dive in?</span>
+          <span className="block">Hi! I am Daniel </span>
           <span
-            className="block text-indigo-600">Start your free trial today.</span>
+            className="block text-indigo-600">Here I share everything I do. Tutorials, code and more.</span>
         </h2>
-        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-            >
-              Get started
-            </a>
-          </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
-            >
-              Learn more
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
 
     <div
-      className="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+      className="bg-white max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
       <div
         className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
         <div>
           <h2
-            className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Recent
-            publications</h2>
-          <p className="mt-3 text-xl text-gray-500 sm:mt-4">
-            Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat
-            massa dictumst amet.
-            Sapien tortor lacus
-            arcu.
-          </p>
+            className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+            Recent publications
+          </h2>
         </div>
         <div
           className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-          {posts.map(({slug, date, title, tags, lang, summary}) => (
+          {posts.map(({slug, date, title, tags, language, summary, category}) => (
             <div key={slug}>
               <div>
                 <a href={slug} className="inline-block">
                     <span
-                      className={classNames("bg-pink-100 text-pink-800", 'inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium')}
+                      className={classNames("uppercase bg-pink-100 text-pink-800", 'inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium')}
                     >
-                      {tags}
+                      {tags?.[0]}
                     </span>
                 </a>
               </div>
@@ -78,10 +55,10 @@ export default function Home({posts}) {
                   <p className="mt-3 text-base text-gray-500">{summary}</p>
                 </a>
               </Link>
-              {tags?.map(tag => (
+              {tags?.slice(1).map(tag => (
                 <span
                   key={tag}
-                  className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800">
+                  className="uppercase inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 mr-1">
                 {tag}
               </span>
               ))}
