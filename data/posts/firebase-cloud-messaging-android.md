@@ -1,7 +1,7 @@
 ---
 title: Enviar notificaciones Android con Firebase Cloud Messaging
 summary: Tutorial de Firebase Cloud Messaging para enviar notificaciones a aplicaciones Android. 
-tags: [android, firebase]
+tags: [firebase, android]
 video.youTube: KTQ4d3ZUS8g
 language: es
 date: 2017-09-01 08:00

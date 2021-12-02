@@ -1,7 +1,7 @@
 ---
 title: "Firebase: Database Realtime para Android"
 summary: Implementación de una aplicación Android para modificar y obtener actualizaciones en tiempo real de datos con Firebase.
-tags: [android, firebase]
+tags: [firebase, android]
 video.youTube: peQ9ATXwPwg
 language: es
 date: 2017-09-01 08:00
