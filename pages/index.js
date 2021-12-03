@@ -38,15 +38,17 @@ export default function Home({posts}) {
           {posts.map(({slug, date, title, tags, language, summary}) => (
             <div key={slug}>
               <div>
-                <a href={slug} className="inline-block">
+                <Link href={"/tag/" + tags?.[0]}>
+                  <a className="inline-block">
                     <span
                       className={classNames("uppercase", tagColor(tags?.[0]), 'inline-flex items-center px-2 rounded text-sm font-bold')}
                     >
                       {tags?.[0]}
                     </span>
-                </a>
+                  </a>
+                </Link>
               </div>
-              <Link href={slug}>
+              <Link href={"/" + slug}>
                 <a className="block mt-4">
                   <p className="text-xl font-semibold text-gray-900">{title}</p>
                   <p className="mt-3 text-base text-gray-500">{summary}</p>
