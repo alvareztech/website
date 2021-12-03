@@ -3,28 +3,7 @@ import Layout, {siteTitle} from '../components/layout'
 import {getAllPosts} from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-function tagColor(tag) {
-  console.log(">> Tag", tag)
-  switch (tag) {
-    case "android":
-      return "bg-green-100 text-green-800"
-    case "ios":
-      return "bg-blue-100 text-blue-800"
-    case "angular":
-    case "java":
-      return "bg-red-100 text-red-800"
-    case "kotlin":
-      return "bg-purple-300 text-purple-700"
-    case "firebase":
-      return "bg-yellow-200 text-yellow-600"
-  }
-  return "bg-gray-300 text-gray-600"
-}
+import {classNames, tagColor} from "../lib/util";
 
 export default function Home({posts}) {
   return (<Layout home>
@@ -94,7 +73,7 @@ export default function Home({posts}) {
 
 export async function getStaticProps() {
   const posts = getAllPosts()
-  console.log(">>> all posts", posts)
+  console.log("ALL POSTs", posts.length)
   return {
     props: {
       posts
