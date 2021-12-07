@@ -1,5 +1,5 @@
 import Layout from '../../components/layout'
-import {getPostsByTag} from "../../lib/posts";
+import {getPostsByTag, getTags} from "../../lib/posts";
 import Link from "next/link";
 import Date from "../../components/date";
 import {classNames, tagColor} from "../../lib/util";
@@ -61,7 +61,8 @@ export default function Tag({tag, posts}) {
 }
 
 export async function getStaticPaths() {
-  const paths = ["/tag/android", "/tag/ios", "/tag/angular"]
+  const tags = getTags()
+  const paths = tags.map(tag => "/tag/" + tag)
   return {
     paths, fallback: false
   }
