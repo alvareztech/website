@@ -3,10 +3,7 @@ import Layout, {siteTitle} from '../components/layout'
 import {getAllPosts} from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import {classNames, tagColor} from "../lib/util";
 
 export default function Home({posts}) {
   return (<Layout home>
@@ -38,18 +35,20 @@ export default function Home({posts}) {
         </div>
         <div
           className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-          {posts.map(({slug, date, title, tags, language, summary, category}) => (
+          {posts.map(({slug, date, title, tags, language, summary}) => (
             <div key={slug}>
               <div>
-                <a href={slug} className="inline-block">
+                <Link href={"/tag/" + tags?.[0]}>
+                  <a className="inline-block">
                     <span
-                      className={classNames("uppercase bg-pink-100 text-pink-800", 'inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium')}
+                      className={classNames("uppercase", tagColor(tags?.[0]), 'inline-flex items-center px-2 rounded text-sm font-bold')}
                     >
                       {tags?.[0]}
                     </span>
-                </a>
+                  </a>
+                </Link>
               </div>
-              <Link href={slug}>
+              <Link href={"/" + slug}>
                 <a className="block mt-4">
                   <p className="text-xl font-semibold text-gray-900">{title}</p>
                   <p className="mt-3 text-base text-gray-500">{summary}</p>
@@ -76,7 +75,7 @@ export default function Home({posts}) {
 
 export async function getStaticProps() {
   const posts = getAllPosts()
-  console.log(">>> all posts", posts)
+  console.log("ALL POSTs", posts.length)
   return {
     props: {
       posts

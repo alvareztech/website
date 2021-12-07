@@ -47,10 +47,6 @@ const navigation2 = [
   },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Layout({children, home}) {
   return <>
     <Head>
@@ -86,15 +82,15 @@ export default function Layout({children, home}) {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <Link href={"about"}>
-              <a href="#"
-                 className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link href={"/about"}>
+              <a
+                className="text-base font-medium text-gray-500 hover:text-gray-900">
                 About
               </a>
             </Link>
-            <Link href={"contact"}>
-              <a href="#"
-                 className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link href={"/contact"}>
+              <a
+                className="text-base font-medium text-gray-500 hover:text-gray-900">
                 Contact
               </a>
             </Link>
