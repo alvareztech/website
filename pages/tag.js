@@ -6,29 +6,28 @@ import {classNames, tagColor} from "../lib/util";
 export default function Tag({tags}) {
   return (<Layout>
     <div
-      className="bg-white max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-
-      <p>{tags.length} tags.</p>
-      <p>
+      className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <h2
+        className="text-3xl font-bold text-gray-900 sm:text-4xl py-4">{tags.length} tags</h2>
+      <div className="space-x-2">
         {tags.map(tag => (
           <Link href={"/tag/" + tag}>
             <a>
           <span
             key={tag}
-            className={classNames("uppercase", tagColor(tag), 'inline-flex items-center px-2 rounded text-xl font-bold')}>
+            className={classNames("uppercase", tagColor(tag), 'inline-flex items-center px-2 my-1 rounded text-xl font-bold')}>
               {tag}
             </span>
             </a>
           </Link>
         ))}
-      </p>
+      </div>
     </div>
   </Layout>)
 }
 
 export async function getStaticProps() {
   const tags = getTags()
-  console.log("ALL TAGs", tags.length)
   return {
     props: {
       tags
