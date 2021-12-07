@@ -1,13 +1,15 @@
 import Layout from '../components/layout'
 import {getPost, getPostSlugs} from '../lib/posts'
 import Head from 'next/head'
+import {MDXRemote} from "next-mdx-remote"
 
+const components = {}
 const editUrl = (slug) => `https://github.com/alvareztech/website/edit/main/data/posts/${slug}.md`;
 
-export default function Post({postData}) {
+export default function Post({post}) {
   return (<Layout>
     <Head>
-      <title>{postData.title}</title>
+      <title>{post.title}</title>
     </Head>
 
     <div className="relative py-16 bg-white overflow-hidden">
@@ -91,20 +93,23 @@ export default function Post({postData}) {
           <h1>
             <span
               className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
-              {postData.tags[0]}
+              {post.tags[0]}
             </span>
             <span
               className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              {postData.title}
+              {post.title}
             </span>
           </h1>
           <p className="mt-8 text-xl text-gray-500 leading-8">
-            {postData.summary}
+            {post.summary}
           </p>
-          <div dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>
+
+          {/*<div dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>*/}
+          <MDXRemote {...post.content} components={components}/>
+
           <div className="flex items-start justify-center mt-14 w-full">
             <div className="space-x-2 flex-1 -mt-0.5">
-              {postData.tags?.map(tag => (<span
+              {post.tags?.map(tag => (<span
                 key={tag}
                 className="uppercase inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
                 {tag}
@@ -113,7 +118,7 @@ export default function Post({postData}) {
             <div
               className="ml-4 text-sm text-gray-500 dark:text-gray-500 transition-colors hover:text-gray-700 dark:hover:text-gray-300">
               <a
-                href={editUrl(postData.slug)}
+                href={editUrl(post.slug)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -137,10 +142,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  const postData = await getPost(params.slug)
+  const post = await getPost(params.slug)
   return {
     props: {
-      postData
+      post
     }
   }
 }
