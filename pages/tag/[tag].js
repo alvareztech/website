@@ -61,9 +61,9 @@ export default function Tag({tag, posts}) {
 }
 
 export async function getStaticPaths() {
-  const paths = []
+  const paths = ["/tag/android", "/tag/ios", "/tag/angular"]
   return {
-    paths, fallback: true
+    paths, fallback: false
   }
 }
 
