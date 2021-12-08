@@ -2,8 +2,9 @@ import Layout from '../components/layout'
 import {getPost, getPostSlugs} from '../lib/posts'
 import Head from 'next/head'
 import {MDXRemote} from "next-mdx-remote"
+import GitHub from "../components/github";
 
-const components = {}
+const components = {GitHub}
 const editUrl = (slug) => `https://github.com/alvareztech/website/edit/main/data/posts/${slug}.md`;
 
 export default function Post({post}) {

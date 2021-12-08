@@ -1,6 +1,6 @@
 ---
 title: "Firebase: Login Google en Android"
-summary: Implementarás un login con Google en Firebase en tu aplicación Android. 
+summary: Implementarás un login con Google en Firebase en tu aplicación Android.
 tags: [firebase, android, google]
 video.youTube: rPzHPNOt7Js
 language: es
@@ -30,20 +30,20 @@ compile 'com.google.firebase:firebase-auth:9.8.0'
 
 ## Implementación
 
-`FirebaseAuth` & `ListenerFirebaseAuth.AuthStateListener` es el oyente que se encarga de avisarnos cuando estamos autenticados o no. 
+`FirebaseAuth` & `ListenerFirebaseAuth.AuthStateListener` es el oyente que se encarga de avisarnos cuando estamos autenticados o no.
 
 Atributos en la *Activity* que se necesite manejar la autenticación.
 
 ```java
-private FirebaseAuth firebaseAuth;  
+private FirebaseAuth firebaseAuth;
 private FirebaseAuth.AuthStateListener firebaseAuthListener;
 ```
 
 Inicialización en el método `onCreate()`
 
 ```java
-firebaseAuth = FirebaseAuth.getInstance();  
-firebaseAuthListener = new FirebaseAuth.AuthStateListener() {  
+firebaseAuth = FirebaseAuth.getInstance();
+firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
     @Override
     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
         FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -63,7 +63,7 @@ firebaseAuth.addAuthStateListener(firebaseAuthListener);
 Terminar de escuchar en el método `onStop()` de la *Activity*
 
 ```java
-if (firebaseAuthListener != null) {  
+if (firebaseAuthListener != null) {
     firebaseAuth.removeAuthStateListener(firebaseAuthListener);
 }
 ```
@@ -73,7 +73,7 @@ if (firebaseAuthListener != null) {
 Adición del método `requestIdToken()` al `GoogleSignInOptions`
 
 ```java
-GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)  
+GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
     .requestIdToken(getString(R.string.default_web_client_id))
     .requestEmail()
     .build();
@@ -82,7 +82,7 @@ GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DE
 Método de autenticación con Firebase
 
 ```java
-private void firebaseAuthWithGoogle(GoogleSignInAccount signInAccount) {  
+private void firebaseAuthWithGoogle(GoogleSignInAccount signInAccount) {
     //...
     AuthCredential credential = GoogleAuthProvider.getCredential(signInAccount.getIdToken(), null);
     firebaseAuth.signInWithCredential(credential)
@@ -111,8 +111,8 @@ Se puede acceder al usuario actual desde cualquier parte de nuestra aplicación 
 Si el método `getCurrentUser()` es `null` nadie se autenticó en la aplicación.
 
 ```java
-FirebaseUser user = firebaseAuth.getCurrentUser();  
-if (user != null) {  
+FirebaseUser user = firebaseAuth.getCurrentUser();
+if (user != null) {
     nameTextView.setText(user.getDisplayName());
     emailTextView.setText(user.getEmail());
     idTextView.setText(user.getUid());
@@ -127,7 +127,7 @@ if (user != null) {
 Basta con usar el método `signOut()` del `FirebaseAuth` en cualquier parte de nuestra aplicación seguida del cierre de sesión o revoco de acceso de Google.
 
 ```java
-public void logOut(View view) {  
+public void logOut(View view) {
     firebaseAuth.signOut();
 
     // Sign Out Google...
@@ -135,11 +135,11 @@ public void logOut(View view) {
 ```
 
 ```java
-public void revoke(View view) {  
+public void revoke(View view) {
     firebaseAuth.signOut();
 
     // Revoke Access Google...
 }
 ```
 
-[master es](https://github.com/alvareztech/FirebaseGoogleSignInAndroid) 
+<GitHub repo="FirebaseGoogleSignInAndroid"/>
