@@ -42,11 +42,11 @@ compile 'com.google.android.gms:play-services-auth:9.8.0'
 ### GoogleApiClient (5:07)
 
 ```java
-GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)  
+GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
     .requestEmail()
     .build();
 
-googleApiClient = new GoogleApiClient.Builder(this)  
+googleApiClient = new GoogleApiClient.Builder(this)
     .enableAutoManage(this, this)
     .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
     .build();
@@ -55,7 +55,7 @@ googleApiClient = new GoogleApiClient.Builder(this)
 ### SignInButton (6.23)
 
 ```xml
-<com.google.android.gms.common.SignInButton  
+<com.google.android.gms.common.SignInButton
     android:id="@+id/signInButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -68,8 +68,8 @@ googleApiClient = new GoogleApiClient.Builder(this)
 ```java
 GoogleSignInAccount account = result.getSignInAccount();
 
-nameTextView.setText(account.getDisplayName());  
-emailTextView.setText(account.getEmail());  
+nameTextView.setText(account.getDisplayName());
+emailTextView.setText(account.getEmail());
 idTextView.setText(account.getId());
 
 Glide.with(this).load(account.getPhotoUrl()).into(photoImageView);
@@ -95,6 +95,4 @@ signInButton.setSize(SignInButton.SIZE_ICON_ONLY);
 signInButton.setColorScheme(SignInButton.COLOR_DARK);
 ```
 
-## Código
-* [Repositorio en GitHub](https://github.com/alvareztech/GoogleSignInAndroid)
-* [Descargar Código en ZIP](https://github.com/alvareztech/GoogleSignInAndroid/archive/master.zip)
+<GitHub repo="GoogleSignInAndroid"/>
